@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Ecommerce Project</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/fontawesome.min.css"
+        integrity="sha512-SMQ1DwSGiIDyNoXdQae7kUBADdtQa8Xsb3LxBxzAXExZNCCH/36yQSpZSYo1c6ckFshd1iMp9eD9+s9+tdhmyg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-pink-50/40">
+    <header class=" bg-pink-600">
+        <div class="header-inner mr-10 ml-10 flex justify-between items-center ">
+
+
+            <div class="logo md:w-[40%]">
+                <img src="./assets/logo.png" alt="" class=" w-[80px]  bg-white md:w-[150px]">
+            </div>
+            <div
+                class="btns-header flex flex-row-reverse gap-10 md:flex-row md:justify-between md:items-center md:gap-50 md:w-[60%]">
+
+
+                <div class="nav ">
+                    <ul class="flex gap-5 text-white ">
+                        <li class="hidden md:block"><a href="index.html">Home</a></li>
+                        <li class="hidden md:block"><a href="index.html">Product</a></li>
+                        <li class="hidden md:block">Collections</li>
+                        <li class="md:hidden"> <i class="fa-solid fa-bars text-2xl "></i></li>
+
+                    </ul>
+                </div>
+                <div class="cart-btn relative text-white">
+                  <a href="cart.html"> <i class="fa-solid fa-cart-shopping text-2xl"></i></a>
+                  <span class="cart-count hidden absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-[10px] font-bold w-4 h-4 rounded-full items-center justify-center">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="text-center pt-10">
+        <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">Your Cart</h1>
+        <p class="text-gray-500 text-sm mt-2">Review your items before you check out</p>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-[1fr_320px] gap-8 items-start">
+        <div id="cart-container" class="flex flex-col gap-4"></div>
+
+        <div class="bg-white border border-pink-100 rounded-2xl p-6 sticky top-5">
+            <h2 class="text-xl font-semibold mb-4 text-gray-900">Order Summary</h2>
+            <div class="flex justify-between text-sm text-gray-500 mb-2">
+                <span>Subtotal</span>
+                <span id="subtotal">₹0</span>
+            </div>
+            <div class="flex justify-between text-sm text-gray-500 mb-2">
+                <span>Shipping</span>
+                <span>Free</span>
+            </div>
+            <div class="flex justify-between text-gray-900 font-bold text-lg border-t border-pink-100 pt-3 mt-1">
+                <span>Total</span>
+                <span id="total">₹0</span>
+            </div>
+            <a href="checkout.html" id="checkout-btn" class="block text-center bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-full mt-5 transition">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-6 px-6 md:px-10">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div>
+                <img src="./assets/logo.png" alt="" class="w-[110px] bg-white p-1 rounded mb-3">
+                <p class="text-sm leading-relaxed text-gray-400">Ethnic wear crafted for everyday elegance — sarees, lehengas, salwars and more, delivered across India.</p>
+                <div class="flex gap-3 mt-4">
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:border-pink-400 hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:border-pink-400 hover:text-pink-400"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:border-pink-400 hover:text-pink-400"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-3">Shop</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-pink-400">All Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-400">My Cart</a></li>
+                    <li><a href="#" class="hover:text-pink-400">Collections</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-3">Support</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-pink-400">Track Order</a></li>
+                    <li><a href="#" class="hover:text-pink-400">Returns & Exchange</a></li>
+                    <li><a href="#" class="hover:text-pink-400">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-3">Contact</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>Erode, Tamil Nadu</li>
+                    <li>hello@ourstore.in</li>
+                    <li>+91 90000 00000</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto border-t border-gray-700 mt-8 pt-5 text-center text-xs text-gray-500">
+            © 2026 Our Store. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
